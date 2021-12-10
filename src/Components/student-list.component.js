@@ -7,19 +7,23 @@ const StudentList = () => {
 const [students, setStudents] = useState([]);
 
 useEffect(() => {
+	getAllStudents();
+}, []);
+
+const getAllStudents  = () => {
 	axios
-	.get("  http://localhost:8000/students/")
+	.get("http://localhost:8000/students/")
 	.then(({ data }) => {
 		setStudents(data);
 	})
 	.catch((error) => {
 		console.log(error);
 	});
-}, []);
+}
 
 const DataTable = () => {
 	return students.map((res, i) => {
-	return <StudentTableRow obj={res} key={i} />;
+	return <StudentTableRow reload={getAllStudents} obj={res} key={i} />;
 	});
 };
 

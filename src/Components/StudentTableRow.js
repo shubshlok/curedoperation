@@ -4,16 +4,18 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 const StudentTableRow = (props) => {
-const { _id, name, email, rollno } = props.obj;
+	console.log('props object', props);
+const { id, name, email, rollno } = props.obj;
 
 const deleteStudent = () => {
 	axios
 	.delete(
-  "http://localhost:8000/students/delete-student/" +_id)
+  "http://localhost:8000/students/" + id)
 	.then((res) => {
 		if (res.status === 200) {
 		alert("Student successfully deleted");
-		window.location.reload();
+		// window.location.reload();
+		props.reload();
 		} else Promise.reject();
 	})
 	.catch((err) => alert("Something went wrong"));
@@ -26,10 +28,10 @@ return (
 	<td>{rollno}</td>
 	<td>
 		<Link className="edit-link"
-		to={"/edit-student/" + _id}>
+		to={"/edit-student/" + id}>
 		Edit
 		</Link>
-		<Button onClick={deleteStudent}
+		<Button onClick={deleteStudent}  
 		size="sm" variant="danger">
 		Delete
 		</Button>

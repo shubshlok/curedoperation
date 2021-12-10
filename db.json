@@ -1,25 +1,10 @@
 {
-    "students": [
-        {   "id": 1,
-            "rollno": 10,
-            "name": "Virat",
-            "email" : "shub@gmail.com"
-        },
-        {   "id": 2,
-            "rollno": 20,
-            "name": "shubham",
-            "email" : "virat@gmail.com"
-        },
-        {   "id": 3,
-            "rollno": 30,
-            "name": "shlok",
-            "email" : "thakur@gmail.com"
-        },
-         {
-             "id": 4,
-             "rollno": 40,
-             "name": "luli",
-            "email" : "luli@gmail.com"
-         }
-    ]
-  }
+  "students": [
+    {
+      "id": 1,
+      "rollno": 10,
+      "name": "Virat",
+      "email": "shub@gmail.com"
+    }
+  ]
+}

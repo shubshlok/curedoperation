@@ -22,7 +22,7 @@ return (
 		<FormGroup>
             
 			<Field name="name" type="text"
-				className="form-control" />
+				className="form-control" placeholder="Enter Name" />
                 
 			<ErrorMessage
 			name="name"
@@ -32,7 +32,7 @@ return (
 		</FormGroup>
 		<FormGroup>
 			<Field name="email" type="text"
-				className="form-control" />
+				className="form-control"  placeholder="Enter Email"/>
 			<ErrorMessage
 			name="email"
 			className="d-block invalid-feedback"
@@ -41,7 +41,7 @@ return (
 		</FormGroup>
 		<FormGroup>
 			<Field name="rollno" type="number"
-				className="form-control" />
+				className="form-control"  placeholder="Enter Roll Number"/>
 			<ErrorMessage
 			name="rollno"
 			className="d-block invalid-feedback"
