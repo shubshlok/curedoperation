@@ -13,6 +13,7 @@ const EditStudent = (props) => {
     name: "",
     email: "",
     rollno: "",
+    gender: "",
   });
 
   //onSubmit handler
@@ -41,8 +42,8 @@ const EditStudent = (props) => {
           props.match.params.id
       )
       .then((res) => {
-        const { name, email, rollno } = res.data;
-        setFormValues({ name, email, rollno });
+        const { name, email, rollno, gender } = res.data;
+        setFormValues({ name, email, rollno, gender });
       })
       .catch((err) => console.log(err));
   }, []);

@@ -5,14 +5,15 @@ import { FormGroup, FormControl, Button } from "react-bootstrap";
 
 const StudentForm = (props) => {
 const validationSchema = Yup.object().shape({
-	name: Yup.string().required("Rquired"),
+	name: Yup.string().required("Required"),
 	email: Yup.string()
 	.email("You have enter an invalid email address")
-	.required("Rquired"),
+	.required("Required"),
 	rollno: Yup.number()
 	.positive("Invalid roll number")
 	.integer("Invalid roll number")
-	.required("Rquired"),
+	.required("Required"),
+	gender: Yup.string().required("Required"),
 });
 console.log(props);
 return (
@@ -30,6 +31,7 @@ return (
 			component="span"
 			/>
 		</FormGroup>
+		
 		<FormGroup>
 			<Field name="email" type="text"
 				className="form-control"  placeholder="Enter Email"/>
@@ -48,6 +50,24 @@ return (
 			component="span"
 			/>
 		</FormGroup>
+		<FormGroup>
+			<Field name="gender" type="text"
+				className="form-control"  placeholder="Enter Gender"/>
+			<ErrorMessage
+			name="gender"
+			className="d-block invalid-feedback"
+			component="span"
+			/>
+		</FormGroup><FormGroup>
+			<Field name="gender" type="date"
+				className="form-control"  placeholder="Select date of birth"/>
+			<ErrorMessage
+			name="date"
+			className="d-block invalid-feedback"
+			component="span"
+			/>
+		</FormGroup>
+		
 		<Button variant="danger" size="lg"
 			block="block" type="submit">
 			{props.children}

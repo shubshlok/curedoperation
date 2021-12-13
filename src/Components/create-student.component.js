@@ -8,11 +8,11 @@ import StudentForm from "./StudentForm";
 // CreateStudent Component
 const CreateStudent = () => {
 const [formValues, setFormValues] =
-	useState({ name: '', email: '', rollno: '' })
+	useState({ name: '', email: '', rollno: '' ,gender: '' })
 // onSubmit handler
 const onSubmit = studentObject => {
 	axios.post(
-'  http://localhost:8000/students/create-student',
+'  http://localhost:8000/students/',
 	studentObject)
 	.then(res => {
 		if (res.status === 200)
@@ -21,6 +21,7 @@ const onSubmit = studentObject => {
 		Promise.reject()
 	})
 	.catch(err => alert('Something went wrong'))
+	
 }
 	
 // Return student form

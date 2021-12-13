@@ -36,6 +36,7 @@ return (
 			<th>Email</th>
 			<th>Roll No</th>
 			<th>Action</th>
+			<th>Gender</th>
 		</tr>
 		</thead>
 		<tbody>{DataTable()}</tbody>

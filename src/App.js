@@ -26,7 +26,7 @@ const App = () => {
             <Container>
               <Navbar.Brand>
                 <Link to={"/create-student"} className="nav-link">
-                  React MERN Stack App
+                 Student Management 
                 </Link>
               </Navbar.Brand>
 
