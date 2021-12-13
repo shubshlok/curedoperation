@@ -33,8 +33,8 @@ return (
 		<thead>
 		<tr>
 			<th>Name</th>
-			<th>Email</th>
-			<th>Roll No</th>
+			<th>Date</th>
+			<th>Age</th>
 			<th>Action</th>
 			<th>Gender</th>
 		</tr>

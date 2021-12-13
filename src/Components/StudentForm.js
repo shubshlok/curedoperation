@@ -9,9 +9,9 @@ const validationSchema = Yup.object().shape({
 	email: Yup.string()
 	.email("You have enter an invalid email address")
 	.required("Required"),
-	rollno: Yup.number()
-	.positive("Invalid roll number")
-	.integer("Invalid roll number")
+	age: Yup.number()
+	.positive("Invalid age")
+	.integer("Invalid age")
 	.required("Required"),
 	gender: Yup.string().required("Required"),
 });
@@ -42,10 +42,10 @@ return (
 			/>
 		</FormGroup>
 		<FormGroup>
-			<Field name="rollno" type="number"
-				className="form-control"  placeholder="Enter Roll Number"/>
+			<Field name="age" type="number"
+				className="form-control"  placeholder="Enter Your Age"/>
 			<ErrorMessage
-			name="rollno"
+			name="age"
 			className="d-block invalid-feedback"
 			component="span"
 			/>
@@ -58,8 +58,9 @@ return (
 			className="d-block invalid-feedback"
 			component="span"
 			/>
-		</FormGroup><FormGroup>
-			<Field name="gender" type="date"
+		</FormGroup>
+		<FormGroup>
+			<Field name="date" type="date"
 				className="form-control"  placeholder="Select date of birth"/>
 			<ErrorMessage
 			name="date"

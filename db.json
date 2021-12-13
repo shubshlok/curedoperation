@@ -1,25 +1,12 @@
 {
   "students": [
     {
-      "name": "monkey",
-      "email": "career@globalgarner.com",
-      "rollno": 23,
+      "name": "shubham",
+      "email": "shubhna@gmail.com",
+      "age": 23,
       "gender": "male",
-      "id": 7
-    },
-    {
-      "name": "monkey",
-      "email": "monkey@gmail.com",
-      "rollno": 23,
-      "gender": "female",
-      "id": 8
-    },
-    {
-      "name": "gabar",
-      "email": "gabar@gmail.com",
-      "rollno": 23,
-      "gender": "male",
-      "id": 9
+      "date": "2021-12-03",
+      "id": 18
     }
   ]
 }

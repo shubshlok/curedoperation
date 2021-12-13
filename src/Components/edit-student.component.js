@@ -12,7 +12,7 @@ const EditStudent = (props) => {
   const [formValues, setFormValues] = useState({
     name: "",
     email: "",
-    rollno: "",
+    age: "",
     gender: "",
   });
 
@@ -42,8 +42,8 @@ const EditStudent = (props) => {
           props.match.params.id
       )
       .then((res) => {
-        const { name, email, rollno, gender } = res.data;
-        setFormValues({ name, email, rollno, gender });
+        const { name, email, age, gender } = res.data;
+        setFormValues({ name, email, age, gender });
       })
       .catch((err) => console.log(err));
   }, []);

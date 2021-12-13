@@ -5,7 +5,7 @@ import axios from "axios";
 
 const StudentTableRow = (props) => {
 	console.log('props object', props);
-const { id, name, email, rollno, gender} = props.obj;
+const { id, name, date, age, gender} = props.obj;
 
 const deleteStudent = () => {
 	axios
@@ -24,8 +24,9 @@ const deleteStudent = () => {
 return (
 	<tr>
 	<td>{name}</td>
-	<td>{email}</td>
-	<td>{rollno}</td>
+	<td>{date}</td>
+	{/* <td>{email}</td> */}
+	<td>{age}</td>
 	
 	<td>
 		<Link className="edit-link"
